@@ -133,5 +133,73 @@ table {
   border-spacing: 0;
 }
 body {
+  font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(#6b8a8f, #c3b690);
+}
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.navigation {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 2% 4%;
+  color: #c3b690;
+  font-size: 2rem;
+}
+.navigation .hamburger {
+  position: fixed;
+  right: 4%;
+  width: 10%;
+  cursor: pointer;
+}
+.navigation .hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background-color: #c3b690;
+  z-index: 1;
+}
+.navigation .hamburger span:first-child {
+  margin-top: 5px;
+}
+.navigation .hamburger span:nth-child(3) {
+  margin-bottom: 0;
+}
+.navigation .hamburger span:before,
+.navigation .hamburger span:after {
+  transition: all 200ms;
+}
+.navigation .hamburger .menu {
+  font-size: 1rem;
+  position: relative;
+  right: -145%;
+  top: 100%;
+}
+.navigation .hamburger .navAnimation {
+  animation: slideIn 2s ease-in;
+}
+@keyframes slideIn {
+  0% {
+    right: -145%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.navigation .hamburger a {
+  color: #c3b690;
+  text-decoration: none;
+}
+.hamburgerAni span:after {
+  transform: rotate(-45deg);
+}
+.hamburgerAni span:before {
+  transform: rotate(45deg);
 }
