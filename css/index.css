@@ -136,7 +136,7 @@ body {
   font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  background-image: linear-gradient(#6b8a8f, #c3b690);
+  background: #6b8a8f;
 }
 .container {
   max-width: 500px;
@@ -202,4 +202,14 @@ body {
 }
 .hamburgerAni span:before {
   transform: rotate(45deg);
+}
+.jumbotron {
+  margin-top: 20%;
+  text-align: center;
+}
+.jumbotron img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 5px;
 }
