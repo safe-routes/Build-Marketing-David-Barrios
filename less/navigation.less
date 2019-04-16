@@ -57,30 +57,18 @@
             }
         }
     }
+}
+
+.menu{
     ul{
-        position: absolute;
+        position: fixed;
         text-align: center;
-        right: 28%;
-        top: 20%;
+        font-size: 2rem;
+        right: 140px;
+        top: 200px;
         visibility: hidden;
     }
-    .menuAni{
-        ul{
-            visibility: visible;
-            transition: all 1s ease-in 200ms;
-        }
-        li{
-            padding-bottom: 15px;
-        }
-        a{
-            color: @bgColor1;
-            text-decoration: none;
-            &:hover{
-                opacity: 0.6;
-            }
-        }
-    }
-    .menu:before {
+    &::before {
         font-size: 1rem;
         display: block;
         position: fixed;
@@ -94,8 +82,24 @@
         clip-path: circle(30px at calc(100% - 65px) 65px);
         visibility: hidden;
     }
-    .menuAni.menu:before{
+}
+.menuAni{
+    ul{
         visibility: visible;
-        clip-path: circle(100%);
+        transition: all 1s ease-in 200ms;
     }
+    li{
+        padding-bottom: 30px;
+    }
+    a{
+        color: @bgColor1;
+        text-decoration: none;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+}
+.menuAni.menu:before{
+    visibility: visible;
+    clip-path: circle(100%);
 }

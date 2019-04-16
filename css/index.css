@@ -115,7 +115,7 @@ body {
   font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
-  background-color: rgba(107, 138, 143, 0.8);
+  background-color: rgba(107, 138, 143, 0.5);
 }
 ol,
 ul {
@@ -142,6 +142,10 @@ table {
 .container {
   max-width: 500px;
   margin: 0 auto;
+}
+footer {
+  text-align: center;
+  font-size: 0.8rem;
 }
 .navigation {
   width: 90%;
@@ -197,7 +201,7 @@ table {
 .navigation .hamburger .hamburgerAni:before,
 .navigation .hamburger .hamburgerAni:after {
   top: 0;
-  background-color: rgba(107, 138, 143, 0.8);
+  background-color: rgba(107, 138, 143, 0.5);
 }
 .navigation .hamburger .hamburgerAni:before {
   transform: rotate(45deg);
@@ -205,28 +209,15 @@ table {
 .navigation .hamburger .hamburgerAni:after {
   transform: rotate(-45deg);
 }
-.navigation ul {
-  position: absolute;
+.menu ul {
+  position: fixed;
   text-align: center;
-  right: 28%;
-  top: 20%;
+  font-size: 2rem;
+  right: 140px;
+  top: 200px;
   visibility: hidden;
 }
-.navigation .menuAni ul {
-  visibility: visible;
-  transition: all 1s ease-in 200ms;
-}
-.navigation .menuAni li {
-  padding-bottom: 15px;
-}
-.navigation .menuAni a {
-  color: rgba(107, 138, 143, 0.8);
-  text-decoration: none;
-}
-.navigation .menuAni a:hover {
-  opacity: 0.6;
-}
-.navigation .menu:before {
+.menu::before {
   font-size: 1rem;
   display: block;
   position: fixed;
@@ -240,7 +231,21 @@ table {
   clip-path: circle(30px at calc(100% - 65px) 65px);
   visibility: hidden;
 }
-.navigation .menuAni.menu:before {
+.menuAni ul {
+  visibility: visible;
+  transition: all 1s ease-in 200ms;
+}
+.menuAni li {
+  padding-bottom: 30px;
+}
+.menuAni a {
+  color: rgba(107, 138, 143, 0.5);
+  text-decoration: none;
+}
+.menuAni a:hover {
+  opacity: 0.6;
+}
+.menuAni.menu:before {
   visibility: visible;
   clip-path: circle(100%);
 }
@@ -249,8 +254,24 @@ table {
   text-align: center;
 }
 .jumbotron img {
-  width: 100%;
-  max-width: 450px;
+  width: 450px;
+  max-width: 90%;
   height: auto;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+main {
+  margin: 20px 0;
+  padding: 0 25px;
+}
+main div {
+  padding: 10px 0;
+}
+main div h2 {
+  font-size: 1.4rem;
+}
+main div p {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
