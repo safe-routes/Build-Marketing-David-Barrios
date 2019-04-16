@@ -1,7 +1,10 @@
 const hamburgerBtn = document.querySelector('.hamburger');
+const btnSpan = document.querySelector('.hamburger span');
 const menu = document.querySelector('.menu');
+const links = document.querySelector('.menu ul');
 
 hamburgerBtn.addEventListener('click', () => {
-    menu.classList.toggle('navAnimation');
-    hamburgerBtn.classList.toggle('hamburgerAni');
+    btnSpan.classList.toggle('hamburgerAni');
+    menu.classList.toggle('menuAni');
+    links.classList.toggle('contentDisplay');
 });
