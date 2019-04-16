@@ -6,5 +6,4 @@ const links = document.querySelector('.menu ul');
 hamburgerBtn.addEventListener('click', () => {
     btnSpan.classList.toggle('hamburgerAni');
     menu.classList.toggle('menuAni');
-    links.classList.toggle('contentDisplay');
 });

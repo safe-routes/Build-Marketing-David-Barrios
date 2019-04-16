@@ -139,9 +139,6 @@ table {
 * {
   box-sizing: border-box;
 }
-*:focus {
-  outline: none;
-}
 .container {
   max-width: 500px;
   margin: 0 auto;
@@ -163,7 +160,8 @@ table {
 }
 .navigation .hamburger {
   position: fixed;
-  right: 0.5%;
+  top: 40px;
+  right: 20px;
   width: 10%;
   z-index: 100;
   cursor: pointer;
@@ -208,7 +206,25 @@ table {
   transform: rotate(-45deg);
 }
 .navigation ul {
-  display: none;
+  position: absolute;
+  text-align: center;
+  right: 28%;
+  top: 20%;
+  visibility: hidden;
+}
+.navigation .menuAni ul {
+  visibility: visible;
+  transition: all 1s ease-in 200ms;
+}
+.navigation .menuAni li {
+  padding-bottom: 15px;
+}
+.navigation .menuAni a {
+  color: rgba(107, 138, 143, 0.8);
+  text-decoration: none;
+}
+.navigation .menuAni a:hover {
+  opacity: 0.6;
 }
 .navigation .menu:before {
   font-size: 1rem;
@@ -228,30 +244,6 @@ table {
   visibility: visible;
   clip-path: circle(100%);
 }
-.navigation .contentDisplay {
-  position: relative;
-  top: 70%;
-  right: 35%;
-  animation: displayContent 1s ease-out 2s;
-}
-.navigation .contentDisplay li {
-  padding-bottom: 15px;
-}
-@keyframes displayContent {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.navigation .contentDisplay a {
-  color: rgba(107, 138, 143, 0.8);
-  text-decoration: none;
-}
-.navigation .contentDisplay a:hover {
-  opacity: 0.6;
-}
 .jumbotron {
   margin-top: 20%;
   text-align: center;
@@ -261,5 +253,4 @@ table {
   max-width: 450px;
   height: auto;
   border-radius: 5px;
-  opacity: 0.5;
 }
