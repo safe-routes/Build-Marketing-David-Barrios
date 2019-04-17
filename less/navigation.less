@@ -7,14 +7,15 @@
     color: @bgColor2;
     font-size: 2rem;
     .logo{
-        visibility: hidden;
+        // visibility: hidden;
     }
     .logoAni{
         visibility: visible;
     }
     .hamburger {
         position: fixed;
-        right: 0.5%;
+        top: 40px;
+        right: 20px;
         width: 10%;
         z-index: 100;
         cursor: pointer; 
@@ -56,10 +57,18 @@
             }
         }
     }
+}
+
+.menu{
     ul{
-        display: none;
+        position: fixed;
+        text-align: center;
+        font-size: 2rem;
+        right: 140px;
+        top: 200px;
+        visibility: hidden;
     }
-    .menu:before {
+    &::before {
         font-size: 1rem;
         display: block;
         position: fixed;
@@ -73,29 +82,24 @@
         clip-path: circle(30px at calc(100% - 65px) 65px);
         visibility: hidden;
     }
-    .menuAni.menu:before{
+}
+.menuAni{
+    ul{
         visibility: visible;
-        clip-path: circle(100%);
+        transition: all 1s ease-in 200ms;
     }
-    .contentDisplay{
-        // display: block;
-        position: relative;
-        top: 70%;
-        right: 35%;
-        animation: displayContent 1s ease-out 2s;
-        li{
-            padding-bottom: 15px;
-        }
-        @keyframes displayContent{
-            0%{opacity: 0;}
-            100%{opacity: 1;}
-        }
-        a{
-            color: @bgColor1;
-            text-decoration: none;
-            &:hover{
-                opacity: 0.6;
-            }
+    li{
+        padding-bottom: 30px;
+    }
+    a{
+        color: @bgColor1;
+        text-decoration: none;
+        &:hover{
+            opacity: 0.6;
         }
     }
+}
+.menuAni.menu:before{
+    visibility: visible;
+    clip-path: circle(100%);
 }
