@@ -156,9 +156,6 @@ footer {
   color: #c3b690;
   font-size: 2rem;
 }
-.navigation .logo {
-  visibility: hidden;
-}
 .navigation .logoAni {
   visibility: visible;
 }
