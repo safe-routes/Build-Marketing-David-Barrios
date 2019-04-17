@@ -146,18 +146,14 @@ table {
 footer {
   text-align: center;
   font-size: 0.8rem;
+  margin: 20px 0;
 }
 .navigation {
   width: 90%;
-  display: flex;
-  justify-content: space-between;
   margin: 10px 0;
   padding: 2% 4%;
-  color: #c3b690;
+  color: #6b8a8f;
   font-size: 2rem;
-}
-.navigation .logoAni {
-  visibility: visible;
 }
 .navigation .hamburger {
   position: fixed;
@@ -173,7 +169,7 @@ footer {
   width: 33px;
   height: 4px;
   border-radius: 3px;
-  background-color: #c3b690;
+  background-color: #6b8a8f;
 }
 .navigation .hamburger span:before,
 .navigation .hamburger span:after {
@@ -183,7 +179,7 @@ footer {
   height: 4px;
   width: 33px;
   border-radius: 3px;
-  background-color: #c3b690;
+  background-color: #6b8a8f;
   transition: all 200ms;
 }
 .navigation .hamburger span:before {
@@ -198,7 +194,7 @@ footer {
 .navigation .hamburger .hamburgerAni:before,
 .navigation .hamburger .hamburgerAni:after {
   top: 0;
-  background-color: rgba(107, 138, 143, 0.5);
+  background-color: #e9993d;
 }
 .navigation .hamburger .hamburgerAni:before {
   transform: rotate(45deg);
@@ -212,9 +208,11 @@ footer {
   font-size: 2rem;
   right: 140px;
   top: 200px;
+  z-index: 100;
   visibility: hidden;
 }
 .menu::before {
+  z-index: 2;
   font-size: 1rem;
   display: block;
   position: fixed;
@@ -223,7 +221,7 @@ footer {
   content: '';
   width: 100vw;
   height: 100vh;
-  background: #c3b690;
+  background: #6b8a8f;
   transition: all 500ms ease-in-out;
   clip-path: circle(30px at calc(100% - 65px) 65px);
   visibility: hidden;
@@ -236,7 +234,7 @@ footer {
   padding-bottom: 30px;
 }
 .menuAni a {
-  color: rgba(107, 138, 143, 0.5);
+  color: #e9993d;
   text-decoration: none;
 }
 .menuAni a:hover {
@@ -247,14 +245,22 @@ footer {
   clip-path: circle(100%);
 }
 .jumbotron {
-  margin-top: 20%;
   text-align: center;
+}
+.jumbotron h1 {
+  z-index: 1;
+  text-align: left;
+  position: absolute;
+  color: #6b8a8f;
+  font-size: 4rem;
+  top: 130px;
+  left: 40px;
+  text-shadow: 3px 3px 0 #e9993d, -1px -1px 0 #e9993d, 1px -1px 0 #e9993d, -1px 1px 0 #e9993d, 1px 1px 0 #e9993d;
 }
 .jumbotron img {
   width: 450px;
   max-width: 90%;
   height: auto;
-  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 main {
@@ -271,4 +277,54 @@ main div p {
   margin-top: 10px;
   font-size: 1rem;
   line-height: 1.5;
+}
+.header h1 {
+  margin-top: 20px;
+  font-size: 2rem;
+  text-align: center;
+  color: #e9993d;
+}
+.about-layout {
+  margin: 30px 0;
+  padding: 0 30px;
+}
+.about-layout .select {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about-layout .select select {
+  width: 50%;
+}
+.about-layout .card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 20px;
+  background: rgba(195, 182, 144, 0.5);
+  max-width: 70%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.about-layout .card img {
+  width: 100%;
+  height: auto;
+}
+.about-layout .card .content {
+  padding: 10px;
+}
+.about-layout .card .content h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+.about-layout .card .content p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.about-layout .card .content ul {
+  margin-top: 10px;
+}
+.about-layout .card .content a {
+  font-size: 1.5rem;
+  color: #6b8a8f;
+}
+.about-layout .card .content a:hover {
+  color: #e9993d;
 }

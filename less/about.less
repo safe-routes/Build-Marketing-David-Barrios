@@ -1,0 +1,52 @@
+.header{
+    h1{
+        margin-top: 20px;
+        font-size: 2rem;
+        text-align: center;
+        color: @navFontColor;
+    }
+}
+.about-layout{
+    margin: 30px 0;
+    padding: 0 30px;
+    .select{
+        margin-bottom: 20px;
+        text-align: center;
+        select{
+            width: 50%;
+        }
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 20px;
+        background: @cardBgColor;
+        max-width: 70%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .content{
+            padding: 10px;
+            h2{
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+            ul{
+                margin-top: 10px;
+            }
+            a{
+                font-size: 1.5rem;
+                color: @bgColor2;
+                &:hover{
+                    color: @navFontColor;
+                }
+            }
+        }
+    }
+}
