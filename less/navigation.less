@@ -1,17 +1,9 @@
 .navigation {
     width: 90%;
-    display: flex;
-    justify-content: space-between;
     margin: 10px 0;
     padding: 2% 4%;
     color: @bgColor2;
     font-size: 2rem;
-    .logo{
-        // visibility: hidden;
-    }
-    .logoAni{
-        visibility: visible;
-    }
     .hamburger {
         position: fixed;
         top: 40px;
@@ -47,7 +39,7 @@
             height: 0;
             &:before, &:after {
                 top: 0;
-                background-color: @bgColor1;
+                background-color: @navFontColor;
             }
             &:before{
                 transform: rotate(45deg);
@@ -66,9 +58,11 @@
         font-size: 2rem;
         right: 140px;
         top: 200px;
+        z-index: 100;
         visibility: hidden;
     }
     &::before {
+        z-index: 2;
         font-size: 1rem;
         display: block;
         position: fixed;
@@ -92,7 +86,7 @@
         padding-bottom: 30px;
     }
     a{
-        color: @bgColor1;
+        color: @navFontColor;
         text-decoration: none;
         &:hover{
             opacity: 0.6;
