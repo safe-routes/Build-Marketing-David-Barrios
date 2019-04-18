@@ -305,6 +305,7 @@ main div p {
 main .left-content,
 main .right-content {
   display: flex;
+  flex-direction: column;
 }
 main .left-content img,
 main .right-content img {
