@@ -143,6 +143,16 @@ table {
   max-width: 500px;
   margin: 0 auto;
 }
+@media (min-width: 800px) {
+  .container {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    max-width: 1000px;
+  }
+}
 footer {
   text-align: center;
   font-size: 0.8rem;
@@ -160,7 +170,7 @@ footer {
   top: 40px;
   right: 20px;
   width: 10%;
-  z-index: 100;
+  z-index: 101;
   cursor: pointer;
 }
 .navigation .hamburger span {
@@ -206,9 +216,9 @@ footer {
   position: fixed;
   text-align: center;
   font-size: 2rem;
-  right: 140px;
-  top: 200px;
   z-index: 100;
+  width: 100%;
+  height: 100%;
   visibility: hidden;
 }
 .menu::before {
@@ -229,6 +239,10 @@ footer {
 .menuAni ul {
   visibility: visible;
   transition: all 1s ease-in 200ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .menuAni li {
   padding-bottom: 30px;
@@ -263,6 +277,11 @@ footer {
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+@media (min-width: 800px) {
+  .jumbotron img {
+    width: 750px;
+  }
+}
 main {
   margin: 20px 0;
   padding: 0 25px;
@@ -277,6 +296,47 @@ main div p {
   margin-top: 10px;
   font-size: 1rem;
   line-height: 1.5;
+}
+@media (min-width: 800px) {
+  main div p {
+    line-height: 2;
+  }
+}
+main .left-content,
+main .right-content {
+  display: flex;
+}
+main .left-content img,
+main .right-content img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 800px) {
+  main .left-content,
+  main .right-content {
+    align-items: center;
+  }
+}
+@media (min-width: 800px) {
+  main .left-content p,
+  main .right-content p {
+    line-height: 2;
+  }
+}
+main .right-content div:last-child {
+  padding-left: 10px;
+}
+main .btn input {
+  width: 100%;
+  height: 40px;
+  background: #6b8a8f;
+  border: none;
+  color: #e9993d;
+  font-size: 1.2rem;
+}
+main .btn input:hover {
+  background: #e9993d;
+  color: #6b8a8f;
 }
 .header h1 {
   margin-top: 20px;

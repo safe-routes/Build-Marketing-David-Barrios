@@ -11,5 +11,42 @@ main{
             font-size: 1rem;
             line-height: 1.5;
         }
+        @media @tablet {
+            p{
+                line-height: 2;
+            }
+        }
+    }
+    .left-content, .right-content{
+        display: flex;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        @media @tablet {
+            align-items: center;
+        }
+        p{
+            @media @tablet {
+                line-height: 2;
+            }
+        }
+    }
+    .right-content{
+        div:last-child{
+            padding-left: 10px;
+        }
+    }
+    .btn input{
+        width: 100%;
+        height: 40px;
+        background: @bgColor2;
+        border: none;
+        color: @navFontColor;
+        font-size: 1.2rem;
+        &:hover{
+            background: @navFontColor;
+            color: @bgColor2;
+        }
     }
 }
