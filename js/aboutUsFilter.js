@@ -14,6 +14,7 @@ class Selection {
         }
     }
 }
+
 const cards = document.querySelectorAll('.card');
 
 cards.forEach( card => new Selection (card));
