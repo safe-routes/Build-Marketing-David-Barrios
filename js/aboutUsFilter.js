@@ -3,26 +3,17 @@ class Selection {
         this.element = element;
         this.data = this.element.dataset.role;
         this.optionSelected = document.querySelector('#memberSelection');
-
-        // this.cards = Array.from(this.cards).map( card => new MemberCard(card));
         this.optionSelected.addEventListener('change', () => this.select());
     }
     select(){
+        this.element.style.display = 'none';
         if(this.optionSelected.value == 'all'){
             this.element.style.display = 'flex';
-        } 
-        this.element.style.display = 'none';
+        } else if(this.data == this.optionSelected.value){
+            this.element.style.display = 'flex';            
+        }
     }
 }
-
-// class MemberCard{
-//     constructor(cardElement){
-//         this.cardElement = cardElement;
-//     }
-//     selected(){
-//         this.cardElement.style.display = 'flex';
-//     }
-// }
 
 const cards = document.querySelectorAll('.card');
 
