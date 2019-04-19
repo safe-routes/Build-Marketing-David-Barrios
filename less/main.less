@@ -32,11 +32,20 @@ main{
                 line-height: 2;
             }
         }
+        @media @tablet {
+            flex-direction: row;
+            div{
+                width: 100%;
+            }
+        }
     }
     .right-content{
         div:last-child{
             padding-left: 10px;
         }
+    }
+    .btn{
+        text-align: center;
     }
     .btn input{
         width: 100%;
@@ -48,6 +57,9 @@ main{
         &:hover{
             background: @navFontColor;
             color: @bgColor2;
+        }
+        @media @desktop {
+            width: 50%;
         }
     }
 }

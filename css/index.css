@@ -267,6 +267,9 @@ footer {
   visibility: visible;
   clip-path: circle(100%);
 }
+.h1Display {
+  visibility: hidden;
+}
 .jumbotron {
   text-align: center;
   margin-top: 30px;
@@ -280,6 +283,11 @@ footer {
 @media (min-width: 800px) {
   .jumbotron img {
     width: 750px;
+  }
+}
+@media (min-width: 1000px) {
+  .jumbotron img {
+    width: 100%;
   }
 }
 main {
@@ -324,8 +332,21 @@ main .right-content img {
     line-height: 2;
   }
 }
+@media (min-width: 800px) {
+  main .left-content,
+  main .right-content {
+    flex-direction: row;
+  }
+  main .left-content div,
+  main .right-content div {
+    width: 100%;
+  }
+}
 main .right-content div:last-child {
   padding-left: 10px;
+}
+main .btn {
+  text-align: center;
 }
 main .btn input {
   width: 100%;
@@ -338,6 +359,11 @@ main .btn input {
 main .btn input:hover {
   background: #e9993d;
   color: #6b8a8f;
+}
+@media (min-width: 1000px) {
+  main .btn input {
+    width: 50%;
+  }
 }
 .header h1 {
   margin-top: 20px;
