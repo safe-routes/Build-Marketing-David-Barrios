@@ -7,6 +7,7 @@ hamburgerBtn.addEventListener('click', () => {
     btnSpan.classList.toggle('hamburgerAni');
     menu.classList.toggle('menuAni');
     navHeader.classList.toggle('h1Display');
+    hamburgerBtn.classList.toggle('hamMenuAni')
 });
 
 window.addEventListener('scroll', () => {
